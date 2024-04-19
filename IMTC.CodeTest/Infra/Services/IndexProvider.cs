@@ -1,5 +1,4 @@
 ﻿using IMTC.CodeTest.Domain.Interfaces.InfraServices;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace IMTC.CodeTest.Infra.Services
 {
@@ -27,17 +26,10 @@ namespace IMTC.CodeTest.Infra.Services
         ];
     }
 
-    public class SimulateData
+    public class SimulateData(int index, string indexCode)
     {
-        public int Index { get; private set; }
-        public string IndexCode { get; private set; }
-        public DateTime Date { get; private set; }
-
-        public SimulateData(int index, string indexCode)
-        {
-            Index = index;
-            IndexCode = indexCode;
-            Date = DateTime.UtcNow;
-        }
+        public int Index { get; private set; } = index;
+        public string IndexCode { get; private set; } = indexCode;
+        public DateTime Date { get; private set; } = DateTime.UtcNow;
     }
 }
