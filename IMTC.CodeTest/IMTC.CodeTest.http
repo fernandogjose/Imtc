@@ -1,0 +1,6 @@
+@IMTC.CodeTest_HostAddress = http://localhost:5008
+
+GET {{IMTC.CodeTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
